@@ -7,7 +7,19 @@ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias slt='open -a "Sublime Text 2" --args --new-window'
 alias ffmpeg="/Applications/ffmpegX.app/Contents/Resources/ffmpeg"
 
-alias te="tail -f /var/log/apache2/error_log"
+function te ()
+{
+	tail -f /var/log/apache2/error_log \
+	| perl -ne \
+		'($timeStamp, $error, $hostName, $message) = 
+			/^\[([^\]]+)\] \[([^\]]+)\] (?:\[client ([^\]]+)\])?\s*(.*)$/i; # Parse log
+		 ($day, $month, $date, $time, $year) = 
+			$timeStamp =~ m/(\S*) (\S*) (\S*) (\S*) (\S*)$/; # Extract the timestamp
+		$message =~ s/, referer: (.*)$/\./;  # Strip the referer references
+		$message =~ s/\\n/\n/g; # Replace literal new lines to expand object dumps
+		print $time . " " . $date . " " . $month . " | " . $message ."\n";'
+}
+
 
 function go { subl .; open http://localhost/~`whoami`/`basename \`pwd\``/htdocs; }
 
