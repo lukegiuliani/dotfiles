@@ -29,28 +29,14 @@ function go { subl .; open http://localhost/~`whoami`/`basename \`pwd\``/htdocs;
 function gstart { git clone --recursive git@bitbucket.org:Squareweave/$@.git ~/Sites/$@; }
 alias gsubup='git submodule --quiet update --init --recursive'
 alias gfixsub='git submodule foreach --recursive git checkout master && git submodule foreach --recursive git pull'
+alias update_satis=' ssh squareweave-anchor php /home/squareweave/dev/satis/bin/satis -n build /home/squareweave/dev/satis/squareweave.composer.json /home/squareweave/dev/satis/build'
 
 function hira {
-	git clone git@bitbucket.org:Squareweave/$@.git ~/Sites/$@;
-	pushd .
-	cd ~/Sites/$@
-
-	composer update
-
-	# link it all together bro!
-	[ -a htdocs/app/shuriken ] || ln -s `pwd -P`/vendor/squareweave/shuriken htdocs/app/shuriken
-	[ -a htdocs/app/shuriken/design/vendor ] || ln -s `pwd -P`/vendor/squareweave/vendor htdocs/app/shuriken/design/vendor
-	[ -a htdocs/app/shuriken/design/vendor/less.js ] || ln -s `pwd -P`/vendor/cloudhead/less.js htdocs/app/shuriken/design/vendor/less.js
-	[ -a htdocs/app/shuriken/design/vendor/bootstrap ] || ln -s `pwd -P`/vendor/twitter/bootstrap htdocs/app/shuriken/design/vendor/bootstrap
-	
-	# while we're here, let's make the appropriate uploads / cache folders
-	mkdir htdocs/app/shuriken/design/cache
-	chmod 777 htdocs/app/shuriken/design/cache
-
-	mkdir htdocs/uploads
-	chmod 777 htdocs/uploads
-
-	popd
+	~/bin/hira.sh "$@"
+	if [ "$1" = "throw" ]
+	then
+		cd "$HOME/Sites/$2"	
+	fi
 }
 
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin:/Users/luke/bin:/usr/local/texlive/2010/bin/universal-darwin/"
