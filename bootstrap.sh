@@ -15,4 +15,4 @@ else
 fi
 unset doIt
 source ~/.bash_profile
-vim ~/.gitconfig
+$EDITOR ~/.gitconfig
