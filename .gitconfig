@@ -68,9 +68,6 @@
 [branch "develop"]
    remote = origin
    merge = refs/heads/develop
-   rebase = true
-   mergeoptions = --no-ff
-
 
 
 # URL shorthands
