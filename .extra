@@ -2,11 +2,6 @@
 
 #export EDITOR="$HOME/bin/mate -w"
 
-alias mysql=/usr/local/mysql/bin/mysql
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
-alias slt='open -a "Sublime Text 2" --args --new-window'
-alias ffmpeg="/Applications/ffmpegX.app/Contents/Resources/ffmpeg"
-
 function te ()
 {
 	tail -f /var/log/apache2/error_log \
@@ -21,14 +16,6 @@ function te ()
 }
 
 
-function go { subl .; open http://localhost/~`whoami`/`basename \`pwd\``/htdocs; }
-
-# git helpers
-
-# aliasey kinda things
-function gstart { git clone --recursive git@bitbucket.org:Squareweave/$@.git ~/Sites/$@; }
-alias gsubup='git submodule --quiet update --init --recursive'
-alias gfixsub='git submodule foreach --recursive git checkout master && git submodule foreach --recursive git pull'
 alias update_satis=' ssh squareweave-anchor php /home/squareweave/dev/satis/bin/satis -n build /home/squareweave/dev/satis/squareweave.composer.json /home/squareweave/dev/satis/build'
 
 function hira {
@@ -51,14 +38,7 @@ function hira {
 	fi
 }
 
-# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin:/Users/luke/bin:/usr/local/texlive/2010/bin/universal-darwin/"
-
 export PATH="~/bin:$PATH"
-
-##
-# MacPorts Installer addition on 2012-03-21_at_08:54:06: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
