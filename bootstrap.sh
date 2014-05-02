@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
 cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
+
+# check out the most appropriate branch
+if [ "$(uname)" == "Darwin" ]; then
+	git checkout master
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+	git checkout linux
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    echo "Cygwin not supported"
+    exit 1
+fi
+
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
