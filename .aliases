@@ -18,6 +18,11 @@ alias s="cd ~/Sites ."
 alias o="open"
 alias oo="open ."
 
+# aliasey kinda things
+alias slt='open -a "Sublime Text 2" --args --new-window'
+alias ffmpeg="/Applications/ffmpegX.app/Contents/Resources/ffmpeg"
+alias update_satis=' ssh squareweave-anchor php /home/squareweave/dev/satis/bin/satis -n build /home/squareweave/dev/satis/squareweave.composer.json /home/squareweave/dev/satis/build'
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
