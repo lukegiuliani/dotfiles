@@ -31,7 +31,6 @@ cask 'alfred'
 cask 'spotify'
 cask 'spotify-notifications'
 cask 'iterm2'
-cask 'garmin-express'
 
 # fonts
 cask 'caskroom/fonts/font-roboto-mono'
