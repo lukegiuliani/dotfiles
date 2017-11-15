@@ -1,6 +1,6 @@
 [user]
-	name = Squareweave Ninja
-	email = ninjas@squareweave.com.au
+	name = Luke Giuliani
+	email = luke@giuliani.com.au
 
 [alias]
 
@@ -32,6 +32,9 @@
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
+
+	# List aliases
+	aliases = config --get-regexp alias
 
 	# Amend the currently staged files to the latest commit
 	amend = commit --amend --reuse-message=HEAD
@@ -106,6 +109,10 @@
 
 	editor = subl -w
 
+	# Speed up commands involving untracked files such as `git status`.
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
+
 [color]
 
 	# Use colors in Git commands that are capable of colored output when
@@ -140,9 +147,6 @@
 
 	# Detect copies as well as renames
 	renames = copies
-	# Enable an experimental heuristic that shifts the hunk boundary in an
-	# attempt to make the resulting patch easier to read.
-	indentHeuristic = true
 
 [diff "bin"]
 
@@ -160,10 +164,9 @@
 	log = true
 
 [push]
-	# Use the Git 1.x.x default to avoid errors on machines with old Git
-	# installations. To use `simple` instead, add this to your `~/.extra` file:
-	# `git config --global push.default simple`. See http://git.io/mMah-w.
-	default = matching
+
+	# https://git-scm.com/docs/git-config#git-config-pushdefault
+	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
