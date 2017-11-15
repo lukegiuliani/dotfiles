@@ -14,13 +14,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
-<<<<<<< HEAD
-alias h="history"
-alias j="jobs"
-alias o="open"
-alias oo="open ."
-=======
->>>>>>> upstream/master
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

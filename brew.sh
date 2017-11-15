@@ -33,21 +33,6 @@ fi;
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-<<<<<<< HEAD
-# # Install RingoJS and Narwhal.
-# # Note that the order in which these are installed is important;
-# # see http://git.io/brew-narwhal-ringo.
-# brew install ringojs
-# brew install narwhal
-
-# Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
-brew install homebrew/dupes/grep
-
-# this breaks macos keychain integration
-# brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-=======
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
@@ -56,7 +41,6 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
->>>>>>> upstream/master
 brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
