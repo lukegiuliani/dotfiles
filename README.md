@@ -1,3 +1,16 @@
+# Luke's dotfiles / bootstrap. 
+
+It's halfway spot. It does a bunch of first install stuff too. 
+
+Dotfiles heavily based of [Mathias' dotfiles](https://github.com/mathiasbynens/dotfiles).
+
+Brew stuff more closely related to [@holman's dotfiles](https://github.com/holman/dotfiles)
+
+## Todo:
+
+* Remove keyboard shortcut for mission controle / expose in preference for spectacle.
+* "Dont forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`."
+
 # Mathias’s dotfiles
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
@@ -25,6 +38,8 @@ Alternatively, to update while avoiding the confirmation prompt:
 ```bash
 set -- -f; source bootstrap.sh
 ```
+
+Finally, if it's a fresh install, that's what .macos and brew is for. 
 
 ### Git-free install
 
