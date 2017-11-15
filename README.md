@@ -11,6 +11,8 @@ Brew stuff more closely related to [@holman's dotfiles](https://github.com/holma
 * Remove keyboard shortcut for mission controle / expose in preference for spectacle.
 * "Dont forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`."
 
+---
+
 # Mathias’s dotfiles
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)

@@ -15,12 +15,13 @@ fi
 function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
-		--exclude ".osx" \
+		--exclude "macos.sh" \
 		--exclude ".vim" \
 		--exclude "bin" \
 		--exclude "init" \
 		--exclude "bootstrap.sh" \
 		--exclude "brew.sh" \
+		--exclude "Brewfile" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;

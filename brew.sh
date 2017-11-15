@@ -20,6 +20,7 @@ then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
   fi
 
+  brew analytics off
 fi
 
 # Run Homebrew through the Brewfile
