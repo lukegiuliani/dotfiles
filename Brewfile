@@ -6,9 +6,11 @@ tap 'caskroom/drivers'
 brew 'git'
 brew 'openssl'
 brew 'unrar'
+brew 'p7zip'
 brew 'wget'
 brew 'ssh-copy-id'
 brew 'p7zip'
+brew 'watch'
 brew 'bash-completion'
 brew 'brew-cask-completion'
 
@@ -19,6 +21,7 @@ brew 'findutils'
 # brew install bash
 # brew install bash-completion2
 
+cask 'firefox'
 cask 'google-chrome'
 cask '1password'
 cask 'spectacle'
@@ -31,6 +34,8 @@ cask 'alfred'
 cask 'spotify'
 cask 'spotify-notifications'
 cask 'iterm2'
+cask 'lifesize'
+cask 'keeper-password-manager'
 
 # fonts
 cask 'caskroom/fonts/font-roboto-mono'
