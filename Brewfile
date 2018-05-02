@@ -24,6 +24,7 @@ brew 'zsh-completions'
 # brew install bash
 # brew install bash-completion2
 
+cask 'atom'
 cask 'firefox'
 cask 'google-chrome'
 # cask '1password'
@@ -40,6 +41,7 @@ cask 'spotify-notifications'
 cask 'lifesize'
 # cask 'keeper-password-manager'
 cask 'google-cloud-sdk'
+cask 'bettertouchtool'
 
 # fonts
 cask 'caskroom/fonts/font-roboto-mono'
