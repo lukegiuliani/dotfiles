@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# updated again by LG 2/5/18
+
 # ~/.macos — https://mths.be/macos
 
 # Close any open System Preferences panes, to prevent them from overriding
@@ -318,7 +320,7 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # # Show the ~/Library folder
-# chflags nohidden ~/Library
+chflags nohidden ~/Library
 
 # # Show the /Volumes folder
 # sudo chflags nohidden /Volumes
@@ -743,10 +745,10 @@ defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 # defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # # Download newly available updates in background
-# defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 
 # # Install System data files & security updates
-# defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
 # # Automatically download apps purchased on other Macs
 # defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
@@ -775,7 +777,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 # # Disable continuous spell checking
-# defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 # ###############################################################################
 # # Google Chrome & Google Chrome Canary                                        #
@@ -834,7 +836,7 @@ defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -boo
 # ###############################################################################
 
 # # Set up my preferred keyboard shortcuts
-# cp -r init/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
+cp -r init/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
 
 # ###############################################################################
 # # Transmission.app                                                            #

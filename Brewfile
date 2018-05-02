@@ -43,7 +43,6 @@ cask 'lifesize'
 cask 'google-cloud-sdk'
 cask 'bettertouchtool'
 
-
 # fonts
 cask 'caskroom/fonts/font-roboto-mono'
 
