@@ -11,11 +11,14 @@ brew 'wget'
 brew 'ssh-copy-id'
 brew 'p7zip'
 brew 'watch'
-brew 'bash-completion'
+# brew 'bash-completion'
 brew 'brew-cask-completion'
 
 brew 'coreutils'
 brew 'findutils'
+
+brew 'zsh'
+brew 'zsh-completions'
 
 # Do I need these?
 # brew install bash
