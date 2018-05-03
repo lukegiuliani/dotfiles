@@ -177,8 +177,8 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
 # # Set language and text formats
 # # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
@@ -670,7 +670,7 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 # defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Install the Solarized Dark theme for iTerm
-open "$(dirname "$0")/init/Solarized Dark.itermcolors"
+# open "$(dirname "$0")/init/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
