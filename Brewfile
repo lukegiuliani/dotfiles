@@ -26,19 +26,19 @@ brew 'zsh-completions'
 ## Casks
 
 cask 'atom'
-cask 'firefox'
+# cask 'firefox'
 cask 'google-chrome'
 cask 'spectacle'
 cask 'skype'
 cask 'keybase'
-cask 'dropbox'
+# cask 'dropbox'
 cask 'slack'
 cask 'alfred'
 cask 'spotify'
 cask 'spotify-notifications'
-cask 'lifesize'
+# cask 'lifesize'
 cask 'google-cloud-sdk'
-cask 'bettertouchtool'
+# cask 'bettertouchtool'
 cask 'sequel-pro'
 
 # fonts
